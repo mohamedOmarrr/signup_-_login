@@ -10,7 +10,11 @@ let usersName = []
 emailRegex = /^[a-z0-9_]+(@gmail.com)$/i
 
 
-if (window.location.pathname.includes('index.html') || path === '/index'){
+if (
+  path === '/' ||
+  path === '/signup_-_login/' ||
+  path.endsWith('index.html')
+) {
 
 // function prevent repeat my code
 function makeValidation(num, classAdded, classRemoved, classSelected, replace1, replace2) {
@@ -177,7 +181,7 @@ function removeMark(num, classSelected){
 
 }//end of if location path
 
-if (window.location.pathname.includes('home.html')) {
+if (path.endsWith('home.html')) {
   window.addEventListener('DOMContentLoaded', function () {
     
     let user = JSON.parse(localStorage.getItem('currentUser'))
