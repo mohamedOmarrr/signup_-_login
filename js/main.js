@@ -7,7 +7,7 @@ const signlink = document.querySelector('.go-sign')
 let path = window.location.pathname
 let storage = []
 let usersName = []
-emailRegex = /^[a-z0-9_]+(@gmail.com)$/i
+emailRegex = /^[a-z0-9._-]+@gmail\.com$/i
 
 
 if (
